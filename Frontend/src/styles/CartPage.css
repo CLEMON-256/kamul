@@ -1,0 +1,247 @@
+.cart-page {
+    padding-top: 120px;
+    /* Space for fixed header */
+    padding-bottom: 80px;
+    background: #fff;
+    min-height: 80vh;
+}
+
+.cart-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Notification */
+.cart-notification {
+    background: #6B8E9B;
+    /* Muted blue from reference */
+    color: white;
+    padding: 15px 20px;
+    border-top: 3px solid #5ba3d0;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Lato', sans-serif;
+}
+
+.cart-notification p {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.check-icon {
+    font-weight: bold;
+}
+
+.continue-shopping-btn {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+/* Table */
+.cart-table-wrapper {
+    margin-bottom: 40px;
+    overflow-x: auto;
+}
+
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 1px solid #eee;
+}
+
+.cart-table th {
+    text-align: left;
+    padding: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #333;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-table td {
+    padding: 20px 15px;
+    border-bottom: 1px solid #eee;
+    vertical-align: middle;
+}
+
+.product-remove button {
+    background: none;
+    border: none;
+    color: #cc0000;
+    font-size: 1.5rem;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.product-thumbnail img {
+    width: 60px;
+    height: auto;
+    border-radius: 4px;
+}
+
+.product-name a {
+    color: #333;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.product-price,
+.product-subtotal {
+    font-family: 'Lato', sans-serif;
+    color: #555;
+    font-weight: 500;
+}
+
+.quantity-input span {
+    display: inline-block;
+    padding: 5px 15px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Actions */
+.cart-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.coupon-section {
+    display: flex;
+    gap: 10px;
+}
+
+.coupon-section input {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    min-width: 200px;
+}
+
+.apply-coupon-btn,
+.update-cart-btn {
+    background: #6B8E9B;
+    /* Blue */
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.update-cart-btn {
+    background: #e0e0e0;
+    color: #999;
+    cursor: default;
+}
+
+.apply-coupon-btn:hover {
+    background: #5ba3d0;
+}
+
+/* Totals */
+.cart-collaterals {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.cart-totals {
+    width: 100%;
+    max-width: 500px;
+}
+
+.cart-totals h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.cart-totals table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    border: 1px solid #eee;
+}
+
+.cart-totals th,
+.cart-totals td {
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+}
+
+.cart-totals th {
+    width: 40%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #555;
+}
+
+.cart-totals td {
+    font-family: 'Lato', sans-serif;
+    color: #333;
+    text-align: right;
+}
+
+.proceed-to-checkout button.checkout-btn {
+    width: 100%;
+    background: #6B8E9B;
+    color: white;
+    border: none;
+    padding: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.proceed-to-checkout button.checkout-btn:hover {
+    background: #5ba3d0;
+}
+
+/* Empty State */
+.empty-cart-message {
+    text-align: center;
+    padding: 60px;
+}
+
+.empty-cart-message p {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.return-shop-btn {
+    display: inline-block;
+    background: #6B8E9B;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    border-radius: 4px;
+}

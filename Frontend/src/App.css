@@ -1,0 +1,17 @@
+.app {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    /* Removed padding-top so header remains an overlay on all pages */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    main {
+        /* Mobile overlay support */
+    }
+}

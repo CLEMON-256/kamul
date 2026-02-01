@@ -1,0 +1,33 @@
+@import './styles/global.css';
+
+/* App-wide tweaks on top of global.css */
+
+#root {
+    min-height: 100vh;
+}
+
+/* Additional root-level styles */
+body {
+    overflow-x: hidden;
+}
+
+/* Smooth scrolling for anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Selection color */
+::selection {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+/* Focus styles for accessibility */
+button:focus,
+input:focus,
+textarea:focus,
+select:focus,
+a:focus {
+    outline: 2px solid var(--secondary-color);
+    outline-offset: 2px;
+}

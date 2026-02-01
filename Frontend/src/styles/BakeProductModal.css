@@ -1,0 +1,236 @@
+/* Modal Overlay */
+.bake-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    backdrop-filter: blur(5px);
+}
+
+/* Modal Content */
+.bake-modal-content {
+    background: white;
+    width: 100%;
+    max-width: 900px;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+    animation: zoomIn 0.3s ease;
+}
+
+.bake-modal-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #999;
+    cursor: pointer;
+    z-index: 10;
+    line-height: 1;
+    transition: color 0.3s;
+}
+
+.bake-modal-close:hover {
+    color: #333;
+}
+
+/* Grid Layout */
+.bake-modal-grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Left: Image */
+.bake-modal-image {
+    flex: 1;
+    min-width: 300px;
+    background: #f8f8f8;
+    position: relative;
+    min-height: 400px;
+}
+
+.bake-modal-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Right: Details */
+.bake-modal-details {
+    flex: 1.2;
+    min-width: 300px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Header */
+.modal-header {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.modal-badge {
+    position: absolute;
+    top: -25px;
+    left: 0;
+    background: #5ba3d0;
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 800;
+    padding: 2px 6px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+.modal-header h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 500;
+    /* Lighter weight as per image */
+    color: #222;
+    margin: 0 0 10px;
+}
+
+.modal-price {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #444;
+}
+
+/* Description */
+.modal-description {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+/* Actions */
+.modal-actions {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+.quantity-selector {
+    display: flex;
+    align-items: center;
+    background: #f5f5f5;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.quantity-selector button {
+    background: none;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-weight: 700;
+    color: #555;
+    transition: background 0.2s;
+}
+
+.quantity-selector button:hover {
+    background: #e0e0e0;
+}
+
+.quantity-selector span {
+    padding: 0 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #333;
+    min-width: 30px;
+    text-align: center;
+}
+
+.add-to-cart-btn {
+    background: #6B8E9B;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    /* match quantity */
+    cursor: pointer;
+    transition: all 0.3s;
+    flex: 1;
+    max-width: 200px;
+    text-transform: uppercase;
+}
+
+.add-to-cart-btn:hover {
+    background: #5ba3d0;
+    box-shadow: 0 5px 15px rgba(91, 163, 208, 0.3);
+}
+
+/* Meta */
+.modal-meta {
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+    font-size: 0.9rem;
+}
+
+.meta-label {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #333;
+    margin-right: 10px;
+}
+
+.meta-value {
+    font-family: 'Lato', sans-serif;
+    color: #888;
+}
+
+/* Animations */
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .bake-modal-grid {
+        flex-direction: column;
+    }
+
+    .bake-modal-image {
+        min-height: 250px;
+        flex: none;
+    }
+
+    .bake-modal-details {
+        padding: 30px 20px;
+    }
+
+    .modal-header h2 {
+        font-size: 1.8rem;
+    }
+}

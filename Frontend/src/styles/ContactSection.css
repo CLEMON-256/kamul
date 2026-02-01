@@ -1,0 +1,237 @@
+.contact-section {
+    background: var(--bg-white);
+    padding: var(--section-padding-y) 0;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 35% 65%;
+    max-width: var(--container-max);
+    margin: 0 auto;
+    box-shadow: var(--shadow-heavy);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+}
+
+/* Left Side: Timing */
+.timing-info {
+    background-color: #729eb9;
+    /* Keeping the muted blue from reference, or use var(--secondary-color) for contrast? Reference is muted blue/teal. */
+    background-color: #6B8E9B;
+    /* Muted aesthetic blue */
+    color: white;
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.timing-info::before {
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: -10%;
+    width: 60%;
+    height: 60%;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M20,80 Q30,50 50,80 T80,80" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="2"/></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+}
+
+.timing-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.timing-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: 0.1em;
+}
+
+.timing-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: -5px;
+    letter-spacing: 0.2em;
+    margin-bottom: 30px;
+}
+
+.timing-details {
+    margin-bottom: 30px;
+}
+
+.timing-details p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin: 5px 0;
+    letter-spacing: 0.1em;
+}
+
+.timing-hours {
+    font-size: 1.1rem !important;
+}
+
+.timing-phone {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.22rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    font-family: 'Font Awesome 5 Brands';
+    /* Ensure this font is loaded or switch to SVG icons */
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background: white;
+    color: var(--primary-color);
+}
+
+/* Right Side: Form */
+.contact-form-container {
+    padding: 60px 80px;
+    background: white;
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.stay-contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-light);
+    letter-spacing: 0.15em;
+    margin-bottom: 10px;
+}
+
+.decorative-arrow {
+    color: var(--primary-color);
+}
+
+.form-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #5ba3d0;
+    /* Keep the specific blue or use primary: var(--primary-color) */
+    color: #4DB6AC;
+    /* Teal */
+    margin: 0;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-light);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.form-group input,
+.form-group textarea {
+    border: none;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+    background: transparent;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-bottom-color: var(--primary-color);
+}
+
+.message-group textarea {
+    height: 100px;
+    resize: none;
+}
+
+.send-message-btn {
+    background: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 0.15em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+
+.send-message-btn:hover {
+    background: var(--primary-color);
+    letter-spacing: 0.2em;
+}
+
+@media (max-width: 968px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .timing-info {
+        padding: 40px 20px;
+    }
+
+    .contact-form-container {
+        padding: 40px 20px;
+    }
+}

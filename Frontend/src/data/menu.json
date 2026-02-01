@@ -1,0 +1,178 @@
+{
+  "currency": "UGX",
+  "categories": [
+    {
+      "id": "breakfast",
+      "name": "Breakfast",
+      "subtitle": "The best food every day",
+      "description": "Start your day with fresh classics and sweet treats."
+    },
+    {
+      "id": "lunch",
+      "name": "Lunch",
+      "subtitle": "Made to share",
+      "description": "Comforting mains, pastas, and chef specials."
+    },
+    {
+      "id": "fast_foods",
+      "name": "Fast Foods",
+      "subtitle": "Quick bites",
+      "description": "Burgers, wraps, and pizza-style favorites."
+    },
+    {
+      "id": "pastries",
+      "name": "Pastries & Bake",
+      "subtitle": "Sweet moments",
+      "description": "Cakes, cookies, and bakery boxes for any occasion."
+    }
+  ],
+  "items": [
+    {
+      "id": "breakfast-english-combo",
+      "name": "English Breakfast Combo",
+      "categoryId": "breakfast",
+      "price": 35000,
+      "description": "Eggs your way, sausage, toast, tomato, and a hot drink.",
+      "tags": ["Continental", "Breakfast"],
+      "imageKey": "hero"
+    },
+    {
+      "id": "breakfast-waffles",
+      "name": "Chocolate Waffles",
+      "categoryId": "breakfast",
+      "price": 30000,
+      "description": "Fluffy waffles with fruit, whipped cream, and chocolate drizzle.",
+      "tags": ["Vegetarian", "Breakfast"],
+      "imageKey": "hero"
+    },
+    {
+      "id": "breakfast-eggs-benedict",
+      "name": "Eggs Benedict",
+      "categoryId": "breakfast",
+      "price": 30000,
+      "description": "Poached eggs on toast with spinach and hollandaise.",
+      "tags": ["Breakfast"],
+      "imageKey": "hero"
+    },
+
+    {
+      "id": "lunch-pasta-alfredo",
+      "name": "Truffle Alfredo Pasta",
+      "categoryId": "lunch",
+      "price": 40000,
+      "description": "Creamy pasta finished with truffle aroma and herbs.",
+      "tags": ["Continental"],
+      "imageKey": "hero"
+    },
+    {
+      "id": "lunch-steak-tagliata",
+      "name": "Steak Tagliata",
+      "categoryId": "lunch",
+      "price": 45000,
+      "description": "Tender steak slices with greens and your choice of side.",
+      "tags": ["Beef"],
+      "imageKey": "hero"
+    },
+    {
+      "id": "lunch-curry-chicken",
+      "name": "Spicy Chicken Curry",
+      "categoryId": "lunch",
+      "price": 40000,
+      "description": "Slow-cooked chicken curry served with vegetables.",
+      "tags": ["Chicken"],
+      "imageKey": "hero"
+    },
+
+    {
+      "id": "fast-pizza-verde",
+      "name": "Pizza Verde",
+      "categoryId": "fast_foods",
+      "price": 28000,
+      "description": "Pesto chicken, cheese, and a crisp base.",
+      "tags": ["Fast Foods"],
+      "imageKey": "hero"
+    },
+    {
+      "id": "fast-shawarma",
+      "name": "Beef/Chicken Shawarma",
+      "categoryId": "fast_foods",
+      "price": 35000,
+      "description": "Juicy filling with house sauce in warm wrap bread.",
+      "tags": ["Fast Foods"],
+      "imageKey": "hero"
+    },
+    {
+      "id": "fast-burger-milanese",
+      "name": "Milanese Burger",
+      "categoryId": "fast_foods",
+      "price": 30000,
+      "description": "Crispy chicken burger served with fries or wedges.",
+      "tags": ["Chicken", "Fast Foods"],
+      "imageKey": "hero"
+    },
+
+    {
+      "id": "bake-fruit-cake",
+      "name": "Traditional Fruit Cake (2kg)",
+      "categoryId": "pastries",
+      "price": 140000,
+      "description": "Dense, rich fruit cake aged for deeper flavor.",
+      "tags": ["Pastries"],
+      "imageKey": "hero"
+    },
+    {
+      "id": "bake-cookie-pack",
+      "name": "Assorted Cookies (12pc)",
+      "categoryId": "pastries",
+      "price": 15000,
+      "description": "A mixed box of classic and seasonal cookie flavors.",
+      "tags": ["Pastries", "Vegetarian"],
+      "imageKey": "hero"
+    },
+    {
+      "id": "bake-treat-box",
+      "name": "Pastry Treat Box",
+      "categoryId": "pastries",
+      "price": 50000,
+      "description": "Donuts, croissants, and pastry picks in one box.",
+      "tags": ["Pastries"],
+      "imageKey": "hero"
+    },
+    {
+      "id": "bake-bread-loaves",
+      "name": "Bread Loaves",
+      "categoryId": "pastries",
+      "price": 8000,
+      "description": "Freshly baked artisanal bread loaves.",
+      "tags": ["Pastries", "Vegetarian"],
+      "imageKey": "hero"
+    },
+    {
+      "id": "bake-brownie-love-box",
+      "name": "Brownie Love Box",
+      "categoryId": "pastries",
+      "price": 32000,
+      "description": "A box of rich, fudgy brownies with white frosting drizzle.",
+      "tags": ["Pastries"],
+      "imageKey": "hero"
+    },
+    {
+      "id": "bake-bento-cake",
+      "name": "Bento Cake",
+      "categoryId": "pastries",
+      "price": 50000,
+      "description": "Small, beautifully decorated round cake perfect for special occasions.",
+      "tags": ["Pastries"],
+      "imageKey": "hero"
+    }
+  ],
+  "featuredItemIds": [
+    "lunch-steak-tagliata",
+    "lunch-pasta-alfredo",
+    "fast-pizza-verde",
+    "breakfast-waffles",
+    "bake-treat-box",
+    "lunch-curry-chicken"
+  ]
+}
+

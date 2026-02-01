@@ -60,11 +60,13 @@ SOCIALACCOUNT_PROVIDERS = {
     }
 }
 
+CORS_ALLOW_ALL_ORIGINS = True # Temporary for debugging images
+
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
     "https://yourdomainname.com",
-    "https://resraunt-app.onrender.com"
-
+    "https://resraunt-app.onrender.com",
+    "https://junior-restaurant-frontend.onrender.com", # Added Render frontend placeholder
 ]
 
 CORS_ALLOW_CREDENTIALS = True

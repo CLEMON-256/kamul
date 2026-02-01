@@ -1,11 +1,6 @@
-#!/usr/bin/env bash
-# exit on error
 set -o errexit
 
-echo "Starting build process..."
+pip install -r Backend/requirements.txt
 
-# Navigate to the Backend directory and run its build script
-cd Backend
-sh build.sh
-
-echo "Build process completed successfully."
+python Backend/restraunt/manage.py collectstatic --noinput
+python Backend/restraunt/manage.py migrate

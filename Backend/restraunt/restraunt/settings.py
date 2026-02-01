@@ -127,11 +127,20 @@ WSGI_APPLICATION = "restraunt.wsgi.application"
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
 DATABASES = {
-    "default": dj_database_url.config(
-        default="postgresql://postgres:1234@localhost:5432/restraunt_db",
-        conn_max_age=600
-    )
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "restraunt_db",
+        "USER": "postgres",
+        "PASSWORD": "1234",
+        "HOST": "localhost",
+        "PORT": "5432",
+    }
 }
+
+# If DATABASE_URL is set and valid, use it
+db_url = os.environ.get("DATABASE_URL")
+if db_url and "://" in db_url:
+    DATABASES["default"] = dj_database_url.parse(db_url, conn_max_age=600)
 
 
 # Password validation

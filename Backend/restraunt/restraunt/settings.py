@@ -143,11 +143,19 @@ DATABASES = {
         "PASSWORD": os.getenv("DB_PWD"),
         "HOST": os.getenv("DB_HOST"),
         "PORT": os.getenv("DB_PORT"),
+        
+
     }
 }
 
 # If DATABASE_URL is set and valid, use it
 db_url = os.environ.get("DATABASE_URL")
+
+if db_url:
+    print(f"DEBUG: DATABASE_URL found: {db_url[:10]}...")
+else:
+    print("DEBUG: DATABASE_URL not found in environment variables.")
+
 if db_url and "://" in db_url:
     DATABASES["default"] = dj_database_url.parse(db_url, conn_max_age=600)
 

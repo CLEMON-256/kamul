@@ -4,9 +4,9 @@ services:
     env: python
     region: oregon 
     plan: free 
-    rootDir: Backend/restraunt
+    rootDir: .
     buildCommand: "./build.sh"
-    startCommand: "gunicorn restraunt.wsgi:application"
+    startCommand: "gunicorn --chdir Backend/restraunt restraunt.wsgi:application"
     envVars:
       - key: PYTHON_VERSION
         value: 3.9.0 

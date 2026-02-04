@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: junior-restaurant-backend
+    env: python
+    region: oregon 
+    plan: free 
+    rootDir: Backend/restraunt
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn restraunt.wsgi:application"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.9.0 
+      - key: DATABASE_URL
+        fromDatabase:
+          name: restraunt-db
+          property: connectionString
+      - key: SECRET_KEY
+        generateValue: true
+      - key: WEB_CONCURRENCY
+        value: 4
+
+databases:
+  - name: restraunt-db
+    databaseName: restraunt_db
+    user: postgres

@@ -12,7 +12,7 @@ services:
         value: 3.9.0 
       - key: DATABASE_URL
         fromDatabase:
-          name: restraunt-db
+          name: junior-restaurant-db-new
           property: connectionString
       - key: SECRET_KEY
         generateValue: true
@@ -20,6 +20,6 @@ services:
         value: 4
 
 databases:
-  - name: restraunt-db
-    databaseName: restraunt_db
+  - name: junior-restaurant-db-new
+    databaseName: junior_restaurant_db
     user: postgres

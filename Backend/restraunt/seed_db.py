@@ -11,17 +11,14 @@ from api.models import Category, MenuItem
 def repair_and_seed():
     with connection.cursor() as cursor:
         print("Checking if 'subtitle' column exists in 'api_category'...")
-        cursor.execute("""
-            SELECT column_name 
-            FROM information_schema.columns 
-            WHERE table_name='api_category' AND column_name='subtitle';
-        """)
-        if not cursor.fetchone():
+        # Database-agnostic way to check for column existence
+        try:
+            cursor.execute("SELECT subtitle FROM api_category LIMIT 1;")
+            print("Column 'subtitle' already exists.")
+        except Exception:
             print("Column 'subtitle' missing. Adding it...")
             cursor.execute("ALTER TABLE api_category ADD COLUMN subtitle varchar(255);")
             print("Column 'subtitle' added.")
-        else:
-            print("Column 'subtitle' already exists.")
 
     with transaction.atomic():
         print("\nSeeding categories...")

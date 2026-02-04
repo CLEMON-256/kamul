@@ -2,14 +2,6 @@
 # Exit on error
 set -o errexit
 
-if [ -z "$DATABASE_URL" ]; then
-    echo "ERROR: DATABASE_URL is not set. The build process cannot run migrations."
-    echo "Check your Render Environment Variables."
-    exit 1
-else
-    echo "DATABASE_URL is set"
-fi
-
 # Install dependencies
 pip install -r Backend/requirements.txt
 
